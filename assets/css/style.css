@@ -1,0 +1,104 @@
+:root{
+    --main-color: black;
+    --secondary-color: #940469;
+    --text-color: #6c757d;
+    --secondary-color-h: #810065;
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--main-color);
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Oswald', sans-serif;
+}
+p {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+}
+.m0-auto{
+    margin: 0 auto;
+}
+.text-purple{
+    color: var(--secondary-color) !important;
+}
+nav{
+    background-color: var(--main-color);
+    font-family: 'Oswald', sans-serif;
+}
+.navbar-brand img{
+    height: 70px;
+}
+.nav-link{
+    transition: .5s;
+}
+.nav-link:hover{
+    color: var(--secondary-color) !important;
+}
+main{
+    background-image: url("../img/foto_main1.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 0;
+    text-shadow: 1.5px 1.5px #000;
+}
+main h1{
+    font-size: 3rem;
+    font-family: 'Oswald', sans-serif;
+}
+.card{
+    min-height: 250px !important;
+}
+@media (max-width: 599px) {
+        main h1{
+            font-size: 2rem;
+        }
+    }
+.logo-sec img{
+    width: 150px;
+}
+#about-me{
+    min-height: 100vh;
+}
+#experience{
+    min-height: 100vh;
+}
+#experience h1, #contact h1{
+    text-decoration: overline var(--secondary-color);
+}
+#experience i{
+    font-size: 3em;
+}
+#my-works{
+    background-color: var(--secondary-color);
+    min-height: 100vh;
+}
+#my-works h1{
+    text-decoration: overline #fff;
+}
+#contact{
+    min-height: 100vh;
+    background-color: #fff;
+}
+.carousel-control-next, .carousel-control-prev{
+    cursor: pointer;
+    width: 20px;
+}
+
+.btn-primary{
+    background-color: var(--secondary-color) !important;
+    border: solid 1px #fff;
+}
+.btn-primary:hover{
+    background-color: #fff !important;
+    border: solid 1px var(--secondary-color) !important;
+    color: var(--secondary-color) !important;
+}
+footer{
+    background-color: var(--secondary-color);
+}
+footer i{
+    font-size: 2em;
+}
