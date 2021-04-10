@@ -1,8 +1,8 @@
 :root{
     --main-color: black;
-    --secondary-color: #940469;
+    --secondary-color: blue;
     --text-color: #6c757d;
-    --secondary-color-h: #810065;
+    --secondary-color-h:blue;
 }
 body{
     margin: 0;
@@ -72,7 +72,7 @@ main h1{
     font-size: 3em;
 }
 #my-works{
-    background-color: var(--secondary-color);
+    background-color:var(--secondary-color);
     min-height: 100vh;
 }
 #my-works h1{
