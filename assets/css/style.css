@@ -1,8 +1,8 @@
 :root{
     --main-color: black;
-    --secondary-color: blue;
+    --secondary-color: #012a4a;
     --text-color: #6c757d;
-    --secondary-color-h:blue;
+    --secondary-color-h:#001f33;
 }
 body{
     margin: 0;
@@ -72,8 +72,9 @@ main h1{
     font-size: 3em;
 }
 #my-works{
-    background-color:var(--secondary-color);
-    min-height: 100vh;
+    background: linear-gradient(180deg, rgba(1,42,74,0.95) 0%, rgba(1,42,74,0.9) 40%, rgba(0,0,0,0.05) 100%);
+   min-height: 100vh;
+    color: #fff;
 }
 #my-works h1{
     text-decoration: overline #fff;
@@ -102,3 +103,166 @@ footer{
 footer i{
     font-size: 2em;
 }
+
+/* Hero */
+.hero {
+  min-height: calc(100vh - 56px); /* ajusta si tu navbar tiene otra altura */
+  background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+              url("../img/hero-fondoRecort.jpg") center/cover no-repeat; /* coloca hero-bg.jpg en assets/img/ */
+  position: relative;
+  padding: 3rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.6));
+  z-index: 1;
+}
+.hero .hero-content { position: relative; z-index: 2; max-width: 900px; }
+.hero .display-4 { font-family: "Oswald", sans-serif; font-size: 2.2rem; line-height: 1.05; }
+@media (min-width: 768px) { .hero .display-4 { font-size: 3rem; } }
+@media (min-width: 1200px) { .hero .display-4 { font-size: 4rem; } }
+
+/* pequeña animación de entrada */
+.hero .hero-content { opacity: 0; transform: translateY(10px); transition: opacity .6s ease, transform .6s ease; }
+.hero.show .hero-content  { opacity: 1; transform: translateY(0); }
+
+/* mejor foco para botones */
+.btn:focus { box-shadow: 0 0 0 .25rem rgba(13,110,253,.25); outline: none; }
+#about-me .card {
+    border-radius: 12px;
+}
+
+#about-me ul {
+    padding-left: 18px;
+}
+
+#about-me i {
+    opacity: 0.9;
+}
+.about-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: fadeUp 0.8s ease forwards;
+  opacity: 0;
+}
+
+.about-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+#about-me .card {
+  border-radius: 16px;
+  transition: transform .4s ease, box-shadow .4s ease;
+}
+
+#about-me .card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 18px 40px rgba(0,0,0,.15);
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: auto;
+}
+
+.contact-form .form-control {
+  border-radius: 12px;
+  padding: 14px;
+  border: 1px solid #ccc;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.contact-form .form-control:focus {
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 0.2rem rgba(0,0,255,0.2);
+}
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: white;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  z-index: 999;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  color: white;
+}
+/* youtube */
+
+/* YouTube Cards */
+.youtube-card {
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.youtube-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.youtube-card iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Animación reveal (ya la tienes, esto la aprovecha) */
+#youtube.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+.social-links a {
+  color: #ffffff;
+  font-size: 1.1rem;
+  margin: 0 12px;
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover {
+  transform: translateY(-6px) scale(1.15);
+  color: #00d8ff; /* color acento */
+}
+
+
