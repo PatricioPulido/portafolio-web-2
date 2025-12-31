@@ -265,4 +265,18 @@ footer i{
   color: #00d8ff; /* color acento */
 }
 
+/* Carousel cards: imagen fija y recorte limpio */
+#my-works .card img {
+  height: 220px;
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+/* ajustar altura en pantallas pequeñas */
+@media (max-width: 576px) {
+  #my-works .card img { height: 180px; }
+}
+
 
