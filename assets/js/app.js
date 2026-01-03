@@ -31,4 +31,29 @@ window.addEventListener("load", () => {
   });
 });
 
+  document.addEventListener("DOMContentLoaded", () => {
+    const elementos = document.querySelectorAll(".nombreAboutMe");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          }
+        });
+      },
+      {
+        threshold: 0.4 // % del elemento visible
+      }
+    );
+
+    elementos.forEach(el => observer.observe(el));
+  });
+  const card = document.querySelector('.contact-card');
+
+const observer = new IntersectionObserver(([entry]) => {
+  if (entry.isIntersecting) card.classList.add('visible');
+});
+
+observer.observe(card);
 
