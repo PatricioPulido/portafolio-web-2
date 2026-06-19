@@ -108,7 +108,7 @@ footer i{
 .hero {
   min-height: calc(100vh - 56px); /* ajusta si tu navbar tiene otra altura */
   background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-              url("../img/hero-fondoRecort.jpg") center/cover no-repeat; /* coloca hero-bg.jpg en assets/img/ */
+              url("../img/depto505_cama.avif") center/cover no-repeat; /* coloca hero-bg.jpg en assets/img/ */
   position: relative;
   padding: 3rem 1rem;
   display: flex;
