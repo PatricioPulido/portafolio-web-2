@@ -87,6 +87,23 @@ main h1{
     cursor: pointer;
     width: 20px;
 }
+.card-icon-placeholder{
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--secondary-color) 0%, #012a4a 100%);
+    color: #fff;
+    font-size: 3.5rem;
+}
+#my-works .card{
+    color: #222;
+    overflow: hidden;
+}
+#my-works .card img{
+    height: 180px;
+    object-fit: cover;
+}
 
 .btn-primary{
     background-color: var(--secondary-color) !important;
